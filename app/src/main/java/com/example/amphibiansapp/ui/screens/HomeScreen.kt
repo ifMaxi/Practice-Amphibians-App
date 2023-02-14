@@ -45,6 +45,9 @@ fun HomeScreen(
     }
 }
 
+/**
+ * Function that will display a list with objects for each item described.
+ */
 @Composable
 fun AmphibianColumnsScreen(
     modifier: Modifier = Modifier,
@@ -61,6 +64,10 @@ fun AmphibianColumnsScreen(
     }
 }
 
+/**
+ * This composable will display the content obtained from the connection to the server.
+ * It consists of a Card that contains the title, the type, the description and the image.
+ */
 @Composable
 fun InformativeCard(
     modifier: Modifier = Modifier,
@@ -116,6 +123,10 @@ fun InformativeCard(
     }
 }
 
+/**
+ * It will show a loading icon when the user starts the app.
+ * The duration of the icon will depend on the user's connection speed.
+ */
 @Composable
 fun LoadingIcon(modifier: Modifier = Modifier) {
     Box(
@@ -141,6 +152,9 @@ fun LoadingIcon(modifier: Modifier = Modifier) {
     }
 }
 
+/**
+ * Function that shows an error icon when the user has no internet connection.
+ */
 @Composable
 fun ErrorIcon(modifier: Modifier = Modifier) {
     Box(

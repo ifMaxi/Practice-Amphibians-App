@@ -18,6 +18,7 @@ import java.io.IOException
 class AmphibiansViewModel(
     private val amphibiansRepository: AmphibiansRepository
 ): ViewModel() {
+    /** Stores the status of the recent updates */
     var amphibiansUiState: AmphibiansUiState by mutableStateOf(AmphibiansUiState.Loading)
         private set
 
@@ -25,6 +26,9 @@ class AmphibiansViewModel(
         getAmphibiansInformation()
     }
 
+    /**
+     * Gets information from the Amphibians API Retrofit service.
+     */
     private fun getAmphibiansInformation() {
         viewModelScope.launch {
             amphibiansUiState = AmphibiansUiState.Loading
@@ -38,6 +42,9 @@ class AmphibiansViewModel(
         }
     }
 
+    /**
+     * Factory for [AmphibiansViewModel] that takes [AmphibiansRepository]
+     */
     companion object {
         val Factory: ViewModelProvider.Factory = viewModelFactory {
             initializer {

@@ -7,6 +7,9 @@ interface AmphibiansRepository {
     suspend fun getAmphibians(): List<AmphibiansInformation>
 }
 
+/**
+ * Network implementation of repository
+ */
 class AmphibiansImpl(
     private val amphibiansApiService: AmphibiansApiService): AmphibiansRepository {
     override suspend fun getAmphibians(): List<AmphibiansInformation> =
