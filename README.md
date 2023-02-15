@@ -12,3 +12,4 @@ Technologies used:
 - Kotlin: Serialization
 - Coil, to load images from the internet
 - JSON, to return structured data that the app needs
+- Manual dependency injection
